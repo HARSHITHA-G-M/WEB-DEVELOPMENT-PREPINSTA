@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Squares</title>
+    <style>
+        .rotating-squares {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+
+        .rotating-squares > div {
+            width: 20px;
+            height: 20px;
+            background: #333;
+            position: absolute;
+            animation: rotating 1s infinite linear;
+        }
+
+        @keyframes rotating {
+            0% {
+                transform: rotate(0deg) translate(20px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(20px) rotate(-360deg);
+            }
+        }
+
+        .rotating-squares > div:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .rotating-squares > div:nth-child(2) {
+            animation-delay: 0.25s;
+        }
+
+        .rotating-squares > div:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .rotating-squares > div:nth-child(4) {
+            animation-delay: 0.75s;
+        }
+    </style>
+</head>
+<body>
+    <div class="rotating-squares">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
